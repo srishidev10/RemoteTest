@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/RemoteTest.iml" filepath="$PROJECT_DIR$/.idea/RemoteTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/remoteTest/remoteTest.iml" filepath="$PROJECT_DIR$/remoteTest/remoteTest.iml" />
     </modules>
   </component>
 </project>

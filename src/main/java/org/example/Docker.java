@@ -26,7 +26,7 @@ public class Docker {
 
     public static void startYamlFile() throws IOException, InterruptedException {
 
-        ProcessBuilder pb = new ProcessBuilder("cmd", "/c", "dockerUp.bat");
+        ProcessBuilder pb = new ProcessBuilder("cmd", "/c", "src/main/resources/dockerUp.bat");
         File dir = new File("src/main/resources");
         pb.directory(dir);
         Process p = pb.start();
@@ -47,7 +47,7 @@ public class Docker {
             while(currentLine!=null)
             {
                 if(currentLine.contains("selenium-grid-hub entered RUNNING state")) {
-                    ProcessBuilder pb = new ProcessBuilder("cmd", "/c", "dockerScaleChrome.bat");
+                    ProcessBuilder pb = new ProcessBuilder("cmd", "/c", "src/main/resources/dockerScaleChrome.bat");
                     File dir = new File("src/main/resources");
                     pb.directory(dir);
                     pb.start();
@@ -78,7 +78,7 @@ public class Docker {
             while(currentLine!=null)
             {
                 if(currentLine.contains("Shutdown complete")) {
-                    ProcessBuilder pb = new ProcessBuilder("cmd", "/c", "dockerScaleChrome.bat");
+                    ProcessBuilder pb = new ProcessBuilder("cmd", "/c", "src/main/resources/dockerScaleChrome.bat");
                     File dir = new File("src/main/resources");
                     pb.directory(dir);
                     pb.start();
@@ -96,7 +96,7 @@ public class Docker {
     }
 
     public static void stopDocker() throws IOException {
-        ProcessBuilder pb = new ProcessBuilder("cmd", "/c", "dockerDown.bat");
+        ProcessBuilder pb = new ProcessBuilder("cmd", "/c", "src/main/resources/dockerDown.bat");
         File dir = new File("src/main/resources");
         pb.directory(dir);
         pb.start();
