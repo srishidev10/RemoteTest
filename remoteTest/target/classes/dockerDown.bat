@@ -1,0 +1,1 @@
+docker-compose -f dockerUp.yml down
